@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Weloza/frontend-project-44.git"
   },
-  "author": "",
+  "author": "Weloza",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Weloza/frontend-project-44/issues"
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Weloza/frontend-project-44#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
