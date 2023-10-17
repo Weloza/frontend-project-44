@@ -17,7 +17,7 @@ const getBrainCalcTask = () => {
     const firstRandomNumber = getRandomNumber(30);
     const secondRandomNumber = getRandomNumber(30);
     const signs = ['+', '-', '*'];
-    const randomSign = signs[getRandomNumber(2)];
+    const randomSign = signs[getRandomNumber(3)];
     const expression = `${firstRandomNumber} ${randomSign} ${secondRandomNumber}`;
     const rightAnswer = calcRightAnswer(firstRandomNumber, secondRandomNumber, randomSign);
     return [expression, rightAnswer];
