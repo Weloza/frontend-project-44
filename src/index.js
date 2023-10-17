@@ -15,7 +15,8 @@ const startMainLogic = (gameTask, gameConditions) => {
         if (playerAnswer === rightAnswer) {
             console.log('Correct!');
         } else {
-            return console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}". \nLet's try again, ${name}!`);
+            return console.log(`"${playerAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}". 
+                \nLet's try again, ${name}!`);
         }
     }
     return console.log(`Congratulations, ${name}!`);
