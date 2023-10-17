@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import startMainLogic, { getRandomNumber } from '../src/index.js';
+import startMainLogic, { getRandomNumber } from '../../src/index.js';
 
 const isEvenRightAnswer = (number) => (((number % 2) === 0) ? 'yes' : 'no');
 

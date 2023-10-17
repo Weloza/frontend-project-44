@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import startMainLogic, { getRandomNumber } from '../src/index.js';
+import startMainLogic, { getRandomNumber } from '../../src/index.js';
 
 const isPrimeRightAnswer = (number) => {
     let i = 2;
