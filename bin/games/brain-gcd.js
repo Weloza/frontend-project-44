@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import startMainLogic, { getRandomNumber } from '../../src/index.js';
+import runEngine from '../../src/index.js';
+import getRandomInRange from '../../src/utils.js';
 
 const gcdRightAnswer = (firstNumber, secondNumber) => {
     if (secondNumber === 0) {
@@ -10,8 +11,8 @@ const gcdRightAnswer = (firstNumber, secondNumber) => {
 };
 
 const getBrainGcdTask = () => {
-    const firstRandomNumber = getRandomNumber(100);
-    const secondRandomNumber = getRandomNumber(100);
+    const firstRandomNumber = getRandomInRange(0, 100);
+    const secondRandomNumber = getRandomInRange(0, 100);
     const expression = `${firstRandomNumber} ${secondRandomNumber}`;
     const rightAnswer = gcdRightAnswer(firstRandomNumber, secondRandomNumber).toString();
     return [expression, rightAnswer];
@@ -19,7 +20,7 @@ const getBrainGcdTask = () => {
 
 const runBrainGcd = () => {
     const brainGcdQuestion = 'Find the greatest common divisor of given numbers.';
-    startMainLogic(brainGcdQuestion, getBrainGcdTask);
+    runEngine(brainGcdQuestion, getBrainGcdTask);
 };
 
 runBrainGcd();

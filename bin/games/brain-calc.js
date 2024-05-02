@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import startMainLogic, { getRandomNumber } from '../../src/index.js';
+import runEngine from '../../src/index.js';
+import getRandomInRange from '../../src/utils.js';
 
 const calcRightAnswer = (firstNumber, secondNumber, sign) => {
     if (sign === '+') {
@@ -14,10 +15,10 @@ const calcRightAnswer = (firstNumber, secondNumber, sign) => {
 };
 
 const getBrainCalcTask = () => {
-    const firstRandomNumber = getRandomNumber(30);
-    const secondRandomNumber = getRandomNumber(30);
+    const firstRandomNumber = getRandomInRange(0, 30);
+    const secondRandomNumber = getRandomInRange(0, 30);
     const signs = ['+', '-', '*'];
-    const randomSign = signs[getRandomNumber(3)];
+    const randomSign = signs[getRandomInRange(0, 2)];
     const expression = `${firstRandomNumber} ${randomSign} ${secondRandomNumber}`;
     const rightAnswer = calcRightAnswer(firstRandomNumber, secondRandomNumber, randomSign);
     return [expression, rightAnswer];
@@ -25,7 +26,7 @@ const getBrainCalcTask = () => {
 
 const runBrainCalc = () => {
     const brainCalcQuestion = 'What is the result of the expression?';
-    startMainLogic(brainCalcQuestion, getBrainCalcTask);
+    runEngine(brainCalcQuestion, getBrainCalcTask);
 };
 
 runBrainCalc();

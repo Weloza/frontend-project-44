@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import startMainLogic, { getRandomNumber } from '../../src/index.js';
+import runEngine from '../../src/index.js';
+import getRandomInRange from '../../src/utils.js';
 
 const isPrimeRightAnswer = (number) => {
     let i = 2;
@@ -19,7 +20,7 @@ const isPrimeRightAnswer = (number) => {
 };
 
 const getBrainPrimeTask = () => {
-    const randomNumber = getRandomNumber(100);
+    const randomNumber = getRandomInRange(0, 100);
     const rightAnswer = isPrimeRightAnswer(randomNumber);
     const expression = `${randomNumber}`;
     return [expression, rightAnswer];
@@ -27,7 +28,7 @@ const getBrainPrimeTask = () => {
 
 const runBrainPrime = () => {
     const brainPrimeQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    startMainLogic(brainPrimeQuestion, getBrainPrimeTask);
+    runEngine(brainPrimeQuestion, getBrainPrimeTask);
 };
 
 runBrainPrime();
