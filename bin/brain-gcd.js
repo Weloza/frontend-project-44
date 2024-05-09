@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import runEngine from '../../src/index.js';
-import getRandomInRange from '../../src/utils.js';
+import runEngine from '../src/index.js';
+import getRandomInRange from '../src/utils.js';
 
 const gcdRightAnswer = (firstNumber, secondNumber) => {
     if (secondNumber === 0) {

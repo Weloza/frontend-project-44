@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 
 const numberOfRounds = 3;
 
+// eslint-disable-next-line consistent-return
 const runEngine = (rules, generateRound) => {
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
@@ -20,13 +21,7 @@ const runEngine = (rules, generateRound) => {
                 Correct answer was "${rightAnswer}".\nLet's try again, ${name}!`);
         }
     }
-    const result = console.log(`Congratulations, ${name}!`);
-    return result;
-};
-
-export const getRandomNumber = (max) => {
-    const randomNumber = Math.floor(Math.random() * max);
-    return randomNumber;
+    console.log(`Congratulations, ${name}!`);
 };
 
 export default runEngine;

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import runEngine from '../../src/index.js';
-import getRandomInRange from '../../src/utils.js';
+import runEngine from '../src/index.js';
+import getRandomInRange from '../src/utils.js';
 
 const calcRightAnswer = (firstNumber, secondNumber, sign) => {
     if (sign === '+') {

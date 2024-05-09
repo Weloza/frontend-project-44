@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import runEngine from '../../src/index.js';
-import getRandomInRange from '../../src/utils.js';
+import runEngine from '../src/index.js';
+import getRandomInRange from '../src/utils.js';
 
 const getBrainProgressionTask = () => {
     let startNumber = getRandomInRange(0, 5);
