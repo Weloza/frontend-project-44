@@ -32,7 +32,7 @@ brain-prime
 ## Game "Even parity"
 Run game: brain-even
 
-[![asciicast](https://asciinema.org/a/611466.svg)](https://asciinema.org/a/611466)
+[![asciicast](https://asciinema.org/a/661368.svg)](https://asciinema.org/a/661368)
 
 ## Game "Calculator"
 Run game: brain-calc
