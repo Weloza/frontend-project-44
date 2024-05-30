@@ -16,11 +16,11 @@ const getBrainProgressionTask = () => {
   const secretNumber = '..';
   const secretNumberIndex = getRandomInRange(0, 10);
   const progression = generateProgression(startNumber, progressionStep, progressionSize);
-  const rightAnswer = progression[secretNumberIndex];
+  const rightAnswer = progression[secretNumberIndex].toString();
   progression[secretNumberIndex] = secretNumber;
 
   const expression = progression.join(' ');
-  return [expression, rightAnswer.toString()];
+  return [expression, rightAnswer];
 };
 
 const runBrainProgression = () => {
