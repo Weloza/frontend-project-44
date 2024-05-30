@@ -14,7 +14,7 @@ const getBrainProgressionTask = () => {
   const progressionStep = getRandomInRange(0, 8) + 1;
   const progressionSize = 10;
   const secretNumber = '..';
-  const secretNumberIndex = getRandomInRange(0, 10);
+  const secretNumberIndex = getRandomInRange(0, 9);
   const progression = generateProgression(startNumber, progressionStep, progressionSize);
   const rightAnswer = progression[secretNumberIndex].toString();
   progression[secretNumberIndex] = secretNumber;
